@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app-template",
+  "private": true,
+  "version": "0.0.1",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "build": "nuxi build --prerender && electron-builder",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "electron:build": "electron-builder"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^18.17.3",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3",
+    "nuxt": "^3.6.5",
+    "nuxt-electron": "^0.6.0",
+    "vite-plugin-electron": "^0.13.0-beta.1",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "dependencies": {
+    "datatables.net-dt": "^1.13.10",
+    "electron-serve": "^1.1.0"
+  }
+}
