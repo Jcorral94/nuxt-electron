@@ -4,8 +4,8 @@ import { SnowBalls } from '../js/snow/SnowBalls';
 const CANVAS = ref();
 let CTX = ref();
 const CANVAS_BACKGROUND_COLOR = 'black';
-const NUMBER_OF_SNOWBALLS = 100;
-const MAX_SNOWBALL_SIZE = 0.7;
+const NUMBER_OF_SNOWBALLS = 1000;
+const MAX_SNOWBALL_SIZE = 0.5;
 
 let snowballs;
 let snowBallWorld;
@@ -24,7 +24,7 @@ function init() {
   updateCanvas();
   snowballs = Array.from({ length: NUMBER_OF_SNOWBALLS }, (_, i) => {
     // return new SnowBall(CTX, CANVAS.width / 2, CANVAS.height / 2, 2, CANVAS);
-    return new SnowBall(CTX.value, Math.random() * CANVAS.value.width, Math.random() * -10, Math.random() * MAX_SNOWBALL_SIZE, CANVAS.value);
+    return new SnowBall(CTX.value, Math.random() * CANVAS.value.width, Math.random() * -30, Math.random() * MAX_SNOWBALL_SIZE, CANVAS.value);
   });
   snowBallWorld = new SnowBalls(snowballs);
   window.requestAnimationFrame(draw);
